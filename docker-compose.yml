@@ -1,0 +1,10 @@
+services:
+  ai-finance-agent:
+    build: .
+    container_name: ai-finance-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./ai_finance_agent.db
+    volumes:
+      - .:/app
